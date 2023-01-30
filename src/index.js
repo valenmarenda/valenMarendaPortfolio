@@ -1,4 +1,3 @@
-import './sass/main.scss'
 
 //preloader
 const preloaderTL = gsap.timeline();
