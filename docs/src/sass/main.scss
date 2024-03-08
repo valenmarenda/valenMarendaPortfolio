@@ -1,0 +1,278 @@
+@import './header';
+@import './project';
+@import './web';
+
+//colors
+$primary-color: #F3737B;
+$secondary-color: #C89FF1 ;
+$white: #FFFFFF;
+$black: #000000;
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+:root {scroll-behavior: smooth;}
+
+/* pointer*/
+@media (min-width: 812px){
+    .cursor{
+        width: 10px;
+        height: 10px;
+        border: 2px solid #F3737B;
+        background: #F3737B;
+        border-radius: 50%;
+        position: absolute;
+        transition-duration: 100ms;
+        z-index: 100;
+    }
+}
+
+/* global*/
+h1{
+    color: #F3737B;
+    font-size: 4rem;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 550;
+}
+
+h2{
+    color: #80647D;
+    font-size: 2rem;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 550;
+}
+
+h3{
+    color: #000000;
+    font-size: 2rem;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 550;
+}
+
+h4{
+    color: #000000;
+    font-size: 1.2rem;
+    font-family: 'Roboto Slab', serif;
+}
+p{
+    color: #000000;
+    font-size: 2rem;
+    font-family: 'Roboto Slab', serif;
+}
+
+.btn{
+text-decoration: none;
+font-size: 2rem;
+font-family: 'Roboto Slab', serif;
+font-weight: 550;
+color: $secondary-color;
+&:hover {
+    letter-spacing: 3px;
+    transition: 0.8s ease-in-out;
+}
+
+}
+
+
+html {
+    font-size: 62.5%; // 10px
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+    
+    @media only screen and (max-width: 62.5em) { // tab-land
+        font-size: 56.25%;
+    }
+    
+    @media only screen and (max-width: 56.25em) { // tab-port
+        font-size: 54%; 
+    }
+
+    @media only screen and (max-width: 37.5em) { // phone
+        font-size: 51%; 
+    }
+    
+    @media only screen and (min-width: 112.5em) { // big desktop
+        font-size: 75%; // 1rem = 12px, 12/16 = 75
+    }
+    
+}
+
+body {
+
+    font-size: 1.6rem;
+    background-color: $white;
+    overflow-x: hidden;
+    cursor: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    @media only screen and (min-width: 20em) { 
+        //overflow-x: scroll;
+    }
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: 1fr repeat(12, minmax(min-content, 10rem)) 1fr;
+}
+
+.noScroll {
+    overflow-y: hidden;
+}
+
+.smooth-scroll-wrapper {
+    position: relative;
+    width: 100vw;
+    scroll-behavior: smooth;
+}
+
+
+
+section {
+    transition: transform 0.25s;
+    will-change: transform;
+}
+
+
+
+.portfolio {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .cardp{
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin: 0;
+  }
+  
+  .card {
+    width: 300px;
+    height: 60px;
+    background-color: lightblue;
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
+  
+  .detail-card {
+    display: none;
+
+
+
+    .detail {
+        position: relative;
+      //  left: 500px; 
+        top: 0;
+        padding: 20px;
+      }
+    
+    
+  
+    h2 {
+      margin-bottom: 10px;
+    }
+  
+    p {
+      margin: 0;
+    }
+  
+    .close-btn {
+      position: absolute;
+      top: -8px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 3rem;
+    }
+  }
+  
+  
+  
+  
+  .hh {
+    background-color: #f2f2f2; 
+    border-radius: 15px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    position: relative; 
+    width: 300px;
+  
+    .corner {
+      position: absolute; 
+      top: 10px; 
+      left: 16px; 
+      display: flex; 
+    }
+  
+    .dot {
+      width: 10px; 
+      height: 10px; 
+      background-color: #ff6b81; 
+      border-radius: 50%;
+      margin-right: 5px; 
+    }
+
+    .contentCardh{
+        padding: 20px;
+      }
+  }
+
+  @media (min-width: 1500px) {
+
+    .card {
+        width: 500px;
+        height: 80px;
+
+      }
+  }
+
+  @media (max-width: 425px) {
+
+    .detailContainer {
+        position: relative;
+        right: 0px;
+      }
+  }
+
+  @media (min-width: 900px) {
+
+    .portfolio {
+        column-gap: 10rem;
+      }
+  }
+  @media (max-width: 768px) {
+
+    .hh {
+        width: 200px;
+    } 
+  }
+  @media (max-width: 500px) {
+
+    .hh {
+        width: 300px;
+    } 
+    .detail-card .detail {
+        padding: 20px;
+        position: relative;
+        top: -50px;
+        left: -220px;
+        z-index: 1;
+    }
+  }
