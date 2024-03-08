@@ -53,8 +53,8 @@ allLinks.forEach(link => {
 
 const typed = new Typed ('.typed',{
     strings:[
-        'Fullstack developer in process', 
-        'Based in Argentina'],
+        'With a love for design', 
+        'Based in Barcelona, Spain'],
     typeSpeed:75,
     startDelay:300,
     backspeed:75,
@@ -66,3 +66,46 @@ const typed = new Typed ('.typed',{
     cursorChar:"|",
     contentType:'html',
 })
+
+document.addEventListener('DOMContentLoaded', function () {
+    const cards = document.querySelectorAll('.card');
+    const detailCard = document.getElementById('detailCard');
+  
+    cards.forEach(function (card) {
+      card.addEventListener('click', function () {
+        const title = this.getAttribute('data-title');
+        const detail = this.getAttribute('data-detail');
+        detailCard.innerHTML =  `           <div class="detail">         <div class="hh">             <div class="content">
+        <div class="corner">
+          <div class="dot pink"></div>
+          <div class="dot pink"></div>
+          <div class="dot pink"></div>
+        </div>
+        <div class="contentCardh">
+        <h2>${title}</h2>
+        <p class="cardp">${detail}</p>
+
+      </div>
+      <span class="close-btn">x</span>
+  </div> </div></div>`
+        detailCard.style.display = 'block';
+      });
+    });
+  
+    document.addEventListener('click', function (event) {
+      if (!event.target.closest('.card') && event.target !== detailCard) {
+        detailCard.style.display = 'none';
+      }
+    });
+  
+    detailCard.addEventListener('click', function (event) {
+      if (event.target.classList.contains('close-btn')) {
+        detailCard.style.display = 'none';
+      }
+    });
+  });
+  
+  
+
+  
+  

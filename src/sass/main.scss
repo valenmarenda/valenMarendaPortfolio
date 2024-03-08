@@ -4,7 +4,7 @@
 
 //colors
 $primary-color: #F3737B;
-$secondary-color: #aa92a8;
+$secondary-color: #C89FF1 ;
 $white: #FFFFFF;
 $black: #000000;
 
@@ -146,3 +146,133 @@ section {
     will-change: transform;
 }
 
+
+
+.portfolio {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .cardp{
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin: 0;
+  }
+  
+  .card {
+    width: 300px;
+    height: 60px;
+    background-color: lightblue;
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
+  
+  .detail-card {
+    display: none;
+
+
+
+    .detail {
+        position: relative;
+      //  left: 500px; 
+        top: 0;
+        padding: 20px;
+      }
+    
+    
+  
+    h2 {
+      margin-bottom: 10px;
+    }
+  
+    p {
+      margin: 0;
+    }
+  
+    .close-btn {
+      position: absolute;
+      top: -8px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 3rem;
+    }
+  }
+  
+  
+  
+  
+  .hh {
+    background-color: #f2f2f2; 
+    border-radius: 15px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    position: relative; 
+    width: 300px;
+  
+    .corner {
+      position: absolute; 
+      top: 10px; 
+      left: 16px; 
+      display: flex; 
+    }
+  
+    .dot {
+      width: 10px; 
+      height: 10px; 
+      background-color: #ff6b81; 
+      border-radius: 50%;
+      margin-right: 5px; 
+    }
+
+    .contentCardh{
+        padding: 20px;
+      }
+  }
+
+  @media (min-width: 1500px) {
+
+    .card {
+        width: 500px;
+        height: 80px;
+
+      }
+  }
+
+  @media (max-width: 425px) {
+
+    .detailContainer {
+        position: relative;
+        right: 0px;
+      }
+  }
+
+  @media (min-width: 900px) {
+
+    .portfolio {
+        column-gap: 10rem;
+      }
+  }
+  @media (max-width: 768px) {
+
+    .hh {
+        width: 200px;
+    } 
+  }
+  @media (max-width: 500px) {
+
+    .hh {
+        width: 300px;
+    } 
+    .detail-card .detail {
+        padding: 20px;
+        position: relative;
+        top: -50px;
+        left: -220px;
+        z-index: 1;
+    }
+  }

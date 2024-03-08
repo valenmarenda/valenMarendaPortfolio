@@ -225,7 +225,7 @@
   justify-content: center;
   place-items: center;
   row-gap: 1rem;
-  margin: 8rem 0 5rem;
+  margin: 8rem 0 15rem;
   padding-top: 5rem;
   padding-left: 2rem;
   padding-right: 2rem;
@@ -455,10 +455,10 @@
 }
 
 .project-box__wrapper {
-  grid-gap: 4rem;
+  grid-gap: 1rem;
   color: #000;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  margin-top: 6rem;
+  margin-top: 3rem;
   display: grid;
 }
 
@@ -466,7 +466,7 @@
   height: 35rem;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2rem;
+  padding: .5rem 1.5rem 1.8rem;
   display: flex;
   position: relative;
 }
@@ -777,7 +777,7 @@ p {
 }
 
 .btn {
-  color: #aa92a8;
+  color: #c89ff1;
   font-family: Roboto Slab, serif;
   font-size: 2rem;
   font-weight: 550;
@@ -852,6 +852,125 @@ main {
 section {
   will-change: transform;
   transition: transform .25s;
+}
+
+.portfolio {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+}
+
+.cards {
+  flex-direction: column;
+  align-items: flex-end;
+  display: flex;
+}
+
+.cardp {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.card {
+  width: 300px;
+  height: 60px;
+  cursor: pointer;
+  background-color: #add8e6;
+  margin-bottom: 8px;
+}
+
+.detail-card {
+  display: none;
+}
+
+.detail-card .detail {
+  padding: 20px;
+  position: relative;
+  top: 0;
+}
+
+.detail-card h2 {
+  margin-bottom: 10px;
+}
+
+.detail-card p {
+  margin: 0;
+}
+
+.detail-card .close-btn {
+  cursor: pointer;
+  font-size: 3rem;
+  position: absolute;
+  top: -8px;
+  right: 10px;
+}
+
+.hh {
+  width: 300px;
+  background-color: #f2f2f2;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 0 10px #0000001a;
+}
+
+.hh .corner {
+  display: flex;
+  position: absolute;
+  top: 10px;
+  left: 16px;
+}
+
+.hh .dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ff6b81;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.hh .contentCardh {
+  padding: 20px;
+}
+
+@media (min-width: 1500px) {
+  .card {
+    width: 500px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 425px) {
+  .detailContainer {
+    position: relative;
+    right: 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .portfolio {
+    column-gap: 10rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hh {
+    width: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hh {
+    width: 300px;
+  }
+
+  .detail-card .detail {
+    z-index: 1;
+    padding: 20px;
+    position: relative;
+    top: -50px;
+    left: -220px;
+  }
 }
 
 /*# sourceMappingURL=index.f7626f62.css.map */
